@@ -81,7 +81,7 @@ form{
 }
 
 form [type="submit"]{
-    height: 20px;
+    height: 50px;
     width: 50%;
     background-color: rgb(132, 14, 201);
     color:white;
