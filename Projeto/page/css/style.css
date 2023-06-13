@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
+/*Estilos básicos*/
 * {
     box-sizing: border-box;
     font-family: 'Oxanium', cursive;
     margin: 0;
     padding: 0;
-    cursor: url('/images/pokebola.png');
   }
   
+  /*Define as variáveis de cor*/
   :root {
     --color-primary: #e20c0c;
     --color-secondary: #FF9A3C;
@@ -15,13 +16,16 @@
     --color-white: #fff;
   }
   
+  /*Estilos gerais do body*/
   body {
-    background: linear-gradient(90deg, #FFE7D1 0%, #FFF2E6 100%);
-    padding: 0 1rem;
+    background: linear-gradient(90deg, #FFE7D1 0%, #FFF2E6 100%); /*cor do fundo da página*/
+    padding: 0 1rem; /*espaço entre o elemento e a sua borda*/
+    
   }
   
+  /*Estilos do cabeçalho, informações e da primeira parte da página*/
   header,
-  .hero-section,
+  .poke-section,
   .info-section,
   footer {
     border-color: var(--color-black);
@@ -30,28 +34,34 @@
     padding: 1.25rem;
   }
   
+  /*Estilos do logotipo do cabeçalho*/
   header img {
     display: block;
     margin: 1rem auto;
   }
   
+  /*Estilo da navegação do cabeçalho*/
   header nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 1rem auto 0;
   }
   
+  /*Estilos dos links de navegação*/
   nav a {
     color: var(--color-black);
     font-size: 1.25rem;
     padding: .5rem;
     text-decoration: none;
   }
-  
-  header nav a:nth-child(2n-1) {
-    text-align: right;
+
+  /*Estilo dos links em geral*/
+  a {
+    color: #b30c0c;
+    text-decoration: none;
   }
-  
+
+  /*Estilo dos botões*/
   .button {
     background-color: var(--color-primary);
     border: 2px solid var(--color-black);
@@ -59,76 +69,61 @@
     color: var(--color-black);
     display: block;
     font-size: 1.25rem;
-    padding: .75rem 1rem;
+    padding: .75rem 1rem; /*espaço entre a imagem e sua borda*/
     max-width: 14rem;
-    position: relative;
+    position: relative; 
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     transition: .2s;
   }
   
+  /*efeito hoover do botão*/
   .button:hover {
     transform: translateX(4px);
   }
   
-  .hero-section {
-    padding-right: 0;
+  /*estilo da primeira parte da página*/
+  .poke-section {
+    padding-right: 0; /*preenchimento 0 do lado direito e 16 na parte inferior*/
     padding-bottom: 16rem;
   }
   
-  .hero-section img {
+  /*estilo da imagem da primeira parte da página*/
+  .poke-section img {
     display: block;
     margin: 1.25rem 0 0 auto;
     max-width: 100%;
   }
   
+  /*Estilo títulos h1*/
   h1 {
     font-size: 3rem;
     line-height: 105%;
   }
   
+  /*Estilo títulos h2*/
   h2 {
     font-size: 2.5rem;
   }
   
-  .hero-section p {
+  /*Estilo parágrafo da primeira parte da página*/
+  .poke-section p {
     font-size: 1.25rem;
     padding-right: 1.25rem;
   }
   
-  .hero-section .button {
+  /*Botão do pokemon go*/
+  .poke-section .button {
     position: relative;
   }
-  
-  .hero-section .button::after {
-    content: '';
-    background: url("img/arrow-curve.svg");
-    position: absolute;
-    top: 5rem;
-    right: -4rem;
-    height: 48px;
-    width: 132px;
-  }
-  
-  .decoration {
-    display: block;
-    position: relative;
-  }
-  
-  .decoration::after {
-    content: '';
-    background: url("img/three-dashes.svg");
-    position: absolute;
-    top: -0.75rem;
-    height: 36px;
-    width: 40px;
-  }
-  
+
+/*seção dos cards*/
   .info-section {
     padding-bottom: 8rem;
   }
   
+  /*seção dos cards*/
   .cards {
     display: flex;
     flex-direction: column;
@@ -139,6 +134,7 @@
     margin-bottom: 4rem;
   }
   
+  /*Estilo de um só card*/
   .card {
     background-color: var(--color-primary);
     border: 2px solid var(--color-black);
@@ -147,17 +143,20 @@
     padding: 2rem 0 0 2rem;
   }
   
+  /*Estilo de um cartão par (segundo cartão)*/
   .card:nth-child(2n) {
     align-self: end;
     background-color: var(--color-secondary);
   }
   
+  /*Estilos do texto forte dentro de um cartão*/
   .card strong {
     display: block;
     font-size: 1.30rem;
     margin: 1rem 0;
   }
   
+  /* Estilos do link dentro de um cartão */
   .card a {
     display: block;
     margin: 3rem 0 0 auto;
@@ -172,26 +171,15 @@
     border-bottom: 0;
     padding: 1rem 1.25rem 4rem;
   }
-  
-  footer nav a {
-    display: block;
-    padding-left: 0;
-  }
-  
+
+  /*Estilo de contatos no footer*/
   .newsletter-form label {
     display: block;
     font-size: 1.5rem;
   }
+
   
-  .newsletter-form input {
-    border: 2px solid var(--color-black);
-    box-shadow: 4px 4px 0 var(--color-black);
-    font-size: 1.5rem;
-    padding: .5rem;
-    width: 100%;
-  }
-  
-  /* Utilitarios */
+  /* Classes utilitarias para margem e alinhamento */
   
   .mt-1 {
     margin-top: 1rem;
@@ -225,29 +213,34 @@
   /* Responsividade */
   
   @media screen and (min-width: 40rem) {
+     /* Estilos da navegação do cabeçalho para telas maiores */
     header nav {
       display: block;
       text-align: center;
     }
   
+    /* Estilos dos cartões para telas maiores */
     .cards {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
     }
   
+     /* Estilos dos cartões pares (segundos cartões) para telas maiores */
     .card:nth-child(2n) {
       margin-top: 1rem;
     }
   }
   
+  /* Estilos responsivos para telas com largura mínima de 48rem (768px) */
   @media screen and (min-width: 48rem) {
     header div {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-  
+
+      /* Estilos do logotipo, navegação e botão no cabeçalho para telas maiores */
     header img,
     header nav,
     header .button {
@@ -255,11 +248,13 @@
     }
   }
   
+  /* Estilos responsivos para telas com largura mínima de 72rem (1152px) */
   @media screen and (min-width: 72rem) {
     h1, h2 {
       font-size: 4rem;
     }
   
+        /* Estilos do container para telas maiores */
     .container {
       display: flex;
       align-items: center;
@@ -267,29 +262,36 @@
       max-width: 72rem;
     }
   
+      /* Estilos para inverter a ordem das colunas no container para telas maiores */
     .container.row-reverse {
       flex-direction: row-reverse;
     }
   
+        /* Estilos da coluna "sobre" no container para telas maiores */
     .about-column {
       flex: 2;
     }
   
+        /* Estilos do parágrafo dentro da coluna "sobre" para telas maiores */
     .about-column p {
       font-size: 1.25rem;
       max-width: 16rem;
     }
   
+        /* Estilos da navegação no rodapé para telas maiores */
     footer nav {
       flex: 1;
     }
   
+        /* Estilos do formulário de inscrição na newsletter para telas maiores */
     .newsletter-form {
       flex: 3;
     }
   }
   
+  /* Estilos responsivos para telas com largura mínima de 80rem (1280px) */
   @media screen and (min-width: 80rem) {
+        /* Estilos do container para telas maiores */
     .container {
       max-width: 80rem;
     }
