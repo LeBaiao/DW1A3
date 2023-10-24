@@ -1,61 +1,47 @@
-*{
+html, body {
     margin: 0;
     padding: 0;
-    background-color: rgb(15, 15, 15);
+    height: 100%;
 }
 
-header{
-text-align: center;
-}
-h1{
-    margin-top: 31px;
-    margin-left: 80px;
-    font-size: 40px;
+#buttons_atv {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Dividir em duas colunas */
+    background-image: url('sua-imagem-de-fundo.jpg'); /* Adicione o caminho da sua imagem de fundo */
+    background-size: cover; /* Cobrir toda a tela com a imagem de fundo */
+    background-position: center; /* Centralizar a imagem de fundo */
+    padding: 20px; /* Espaçamento interno para dar espaço à imagem de fundo */
+    min-height: 100vh; /* Garantir que o contêiner ocupe pelo menos a altura da janela do navegador */
 }
-#buttons_atv{
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.button {
-    width: 50%;
-    padding: 4%;
-    border: 2px solid #000;
-    border-radius: 5px;
-    font-size: clamp(8px, 5vw, 1rem);
-    font-weight: 600;
-    color: white;
-    background-color: #444;
-    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
-  }
-  
-  .button:active {
-    box-shadow: inset -4px 4px 0 #222;
-    font-size: 0.9rem;
-  }
-
-main{
-    width: 100vh;
-    display:flex; /*deixa a div uma do lado da outra*/
-    flex-direction: row;
-    justify-content: space-between;
+#buttons_atv {
+    display: flex;
+    justify-content: space-between; /* Dividir em duas colunas */
+    background-image: url('city-image.png'); /* Adicione o caminho da sua imagem de fundo */
+    background-size: cover; /* Cobrir toda a tela com a imagem de fundo */
+    background-position: center; /* Centralizar a imagem de fundo */
+    padding: 20px; /* Espaçamento interno para dar espaço à imagem de fundo */
+    min-height: 100vh; /* Garantir que o contêiner ocupe pelo menos a altura da janela do navegador */
 }
 
-button{
-    border-radius: 10px;
-    width: 200px;
-    height: 50px;
-    background-color: #f08c49;
-    font-weight: 700;
-    font-size: 18px;
-    margin-top: 30px;
-    
+.button-column {
+    flex: 1; /* Ocupar todo o espaço disponível */
+    display: flex;
+    flex-direction: column; /* Organizar os botões na vertical */
+    align-items: center; /* Centralizar botões horizontalmente */
 }
 
+#btn-atividade {
+    margin: 10px 0; /* Espaçamento entre os botões */
+    background-color: #800080; /* Cor de fundo lilás */
+    color: white; /* Cor do texto branco */
+    border: none; /* Remover borda */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Mostrar cursor de mão ao passar o mouse */
+    transition: background-color 0.3s; /* Efeito de transição de cor de fundo */
+}
 
-
-      
+#btn-atividade:hover {
+    background-color: #6A5ACD; /* Cor de fundo lilás mais escura ao passar o mouse */
+}
